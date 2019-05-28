@@ -18,6 +18,8 @@ jobs:
 
     working_directory: ~/repo
 
+    parallelism: 2
+
     steps:
       - checkout
 
@@ -29,8 +31,21 @@ jobs:
             - v1-dependencies-{{ arch }}-
 
       - run:
+          name: Install Chrome??
+          command: |
+            sudo apt install -y libappindicator3-1
+            curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome.deb
+            sudo sed -i 's|HERE/chrome\"|HERE/chrome\" --disable-setuid-sandbox|g' /opt/google/chrome/google-chrome
+            rm google-chrome.deb
+            /opt/google/chrome/google-chrome --version
+
+      - run:
           name: Install dependencies
           command: |
+            gem update --system
+            gem install bundler
+            bundler update
             bundle install --deployment --jobs=4 --retry=3 --path vendor/bundle
             bundle clean
 

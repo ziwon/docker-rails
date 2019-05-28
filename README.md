@@ -1,4 +1,7 @@
-# app
+# docker-rails
+
+[![CircleCI](https://circleci.com/gh/ziwon/docker-rails.svg?style=svg)](https://circleci.com/gh/ziwon/docker-rails)
+[![](https://images.microbadger.com/badges/image/ziwon/docker-rails.svg)](https://microbadger.com/images/ziwon/docker-rails "Get your own image badge on microbadger.com")
 
 This is a Rails 5 app.
 
