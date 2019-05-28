@@ -55,6 +55,16 @@ Optionally:
 * `RAILS_LOG_TO_STDOUT`
 * `RAILS_SERVE_STATIC_FILES`
 
+## Docker
+
+The execution of the docker-composite in the deployment environment which is
+using the above environment variables (also including 'RAILS_ENV=production') is as follows:
+
+```
+$ docker-compose up -d -build
+$ curl http://localhost:3000
+```
+
 [rbenv]:https://github.com/sstephenson/rbenv
 [redis]:http://redis.io
 [Homebrew]:http://brew.sh
