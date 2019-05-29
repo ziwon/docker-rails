@@ -2,7 +2,9 @@
 
 [![CircleCI](https://circleci.com/gh/ziwon/docker-rails.svg?style=svg)](https://circleci.com/gh/ziwon/docker-rails)
 [![](https://images.microbadger.com/badges/image/ziwon/docker-rails.svg)](https://microbadger.com/images/ziwon/docker-rails "Get your own image badge on microbadger.com")
+![Last Commit on GitHub](https://img.shields.io/github/repo-size/ziwon/docker-rails.svg)
 ![Last Commit on GitHub](https://img.shields.io/github/last-commit/ziwon/docker-rails.svg?color=orange)
+
 
 This is a Rails 5 app. (Basically, it's auto-generated from [mattbrictson/rails-template](https://github.com/mattbrictson/rails-template))
 
